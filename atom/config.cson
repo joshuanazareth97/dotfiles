@@ -1,0 +1,31 @@
+"*":
+  "atom-python-run":
+    consoleLog: false
+    f5Command: "py -3 {file}"
+    f6Command: "py -2 {file}"
+  "autocomplete-python":
+    useKite: false
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "atom-dark-syntax"
+    ]
+    uriHandlerRegistration: "always"
+  "django-templates":
+    defaultToDjangoTemplatesForFilePathsContaining: [
+      "luci"
+    ]
+  editor:
+    fontSize: 13
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "2151387b-b9ef-4b8c-8b28-5e085d16ed11"
+  kite:
+    editorMetricsEnabled: "no"
+  "markdown-preview":
+    breakOnSingleNewline: true
+  script:
+    cwdBehavior: "Directory of the script"
+  welcome:
+    showOnStartup: false

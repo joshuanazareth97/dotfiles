@@ -1,22 +1,18 @@
-Dotfiles Template
+Joshua's Dotfiles
 =================
 
-This is a template repository for bootstrapping your dotfiles with [Dotbot][dotbot].
+This is the repository where I store all the file-based config for my programs.
 
-To get started, you can [fork][fork] this repository (and probably delete this
-README and rename your version to something like just `dotfiles`).
+I would suggest using these files just as a reference, rather than blindly copying them.
 
-In general, you should be using symbolic links for everything, and using git
-submodules whenever possible.
-
-To keep submodules at their proper versions, you could include something like
-`git submodule update --init --recursive` in your `install.conf.yaml`.
-
-To upgrade your submodules to their latest versions, you could periodically run
-`git submodule update --init --remote`.
+Management of all the dotfiles is done using the wonderful [Dotbot][dotbot] by Anish Athalye.
+It provides easy configuration of install and update behaviour through a simple YAML file.
 
 Inspiration
 -----------
+
+Initially I was inspired by this [blog post][blog-post] on managing your dotfiles using a VCS.
+The approach seemed elegant so I decided to give it a shot.
 
 If you're looking for inspiration for how to structure your dotfiles or what
 kinds of things you can include, you could take a look at some repos using
@@ -33,17 +29,11 @@ Dotbot.
 
 And there are about [700 more here][dotbot-users].
 
-If you're using Dotbot and you'd like to include a link to your dotfiles here
-as an inspiration to others, please submit a pull request.
-
 License
 -------
 
 This software is hereby released into the public domain. That means you can do
 whatever you want with it without restriction. See `LICENSE.md` for details.
-
-That being said, I would appreciate it if you could maintain a link back to
-Dotbot (or this repository) to help other people discover Dotbot.
 
 [dotbot]: https://github.com/anishathalye/dotbot
 [fork]: https://github.com/anishathalye/dotfiles_template/fork
@@ -56,3 +46,5 @@ Dotbot (or this repository) to help other people discover Dotbot.
 [wazery_dotfiles]: https://github.com/wazery/dotfiles
 [thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
 [dotbot-users]: https://github.com/anishathalye/dotbot/wiki/Users
+
+[blog-post]: https://www.anishathalye.com/2014/08/03/managing-your-dotfiles/

@@ -1,0 +1,10 @@
+﻿atom-python-run@0.9.7
+autocomplete-python@1.11.0
+django-templates@0.5.0
+emmet@2.4.3
+file-icons@2.1.27
+language-powershell@5.0.0
+platformio-ide-terminal@2.8.4
+react@0.18.0
+script@3.18.1
+

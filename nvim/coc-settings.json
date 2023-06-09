@@ -1,0 +1,77 @@
+{
+        "diagnostic.errorSign": " ",
+        "diagnostic.warningSign": " ",
+        "diagnostic.infoSign": " ",
+        "diagnostic.hintSign": "",
+        "coc.preferences.hoverTarget": "float",
+        "coc.preferences.formatOnType": true,
+        "coc.preferences.formatOnSaveFiletypes": [
+                "python"
+        ],
+        "list.source.files.command": "rg",
+        "list.source.files.args": [
+                "--files"
+        ],
+        "list.source.grep.args": [
+                "--column",
+                "--line-number",
+                "--no-heading",
+                "--fixed-strings",
+                "--ignore-case",
+                "--no-hidden",
+                "--follow"
+        ],
+        "list.insertMappings": {
+                "<C-x>": "action:split",
+                "<C-s>": "action:vsplit"
+        },
+        "list.normalMappings": {
+                "<C-x>": "action:split",
+                "<C-s>": "action:vsplit"
+        },
+        "suggest.timeout": 500,
+        "suggest.completionItemKindLabels": {
+                "variable": "",
+                "function": "",
+                "class": "",
+                "module": "",
+                "keyword": "",
+                "property": "",
+                "value": "",
+                "field": "",
+                "method": "",
+                "file": "",
+                "folder": ""
+        },
+        "python.linting.flake8Path": "~/bin/flake8",
+        "python.linting.flake8Enabled": true,
+        "python.jediEnabled": false,
+        "python.formatting.provider": "black",
+        "python.formatting.blackPath": "~/bin/black",
+        "python.formatting.blackArgs": [
+                "--line-length",
+        "80"
+        ],
+        "yaml.trace.server": "verbose",
+        "yaml.validate": true,
+        "yaml.completion": true,
+        "languageserver": {
+                "golang": {
+                        "command": "gopls",
+                        "rootPatterns": [
+                                "go.mod",
+                                ".vim/",
+                                ".git/",
+                                ".hg/"
+                        ],
+                        "filetypes": [
+                                "go"
+                        ],
+                        "initializationOptions": {
+                                "usePlaceholders": true
+                        }
+                }
+        },
+        "python.linting.enabled": true,
+        "python.autoComplete.addBrackets": true
+}

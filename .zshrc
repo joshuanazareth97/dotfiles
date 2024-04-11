@@ -188,7 +188,7 @@ alias tmka="tmux killw -a"
 alias tmas="tmux attach-session -t"
 alias ns="npm start"
 # Load external aliases
-for f in ~/.config/aliases/*-alias.sh; do source $f; done
+if [ -d ~/.config/aliases ]; then for f in ~/.config/aliases/*-alias.sh; do source $f; done; fi
  
 #########################
 # Utility Functions     #

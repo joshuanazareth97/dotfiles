@@ -75,7 +75,7 @@ HIST_STAMPS="dd/mm/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting)
+plugins=(git zsh-syntax-highlighting poetry)
  
 source $ZSH/oh-my-zsh.sh
  
@@ -102,9 +102,7 @@ SPACESHIP_PROMPT_ORDER=(
   aws           # Amazon Web Services section
   venv          # virtualenv section
   conda         # conda virtualenv section
-  pyenv         # Pyenv section
   dotnet        # .NET section
-  ember         # Ember.js section
   # kubecontext   # Kubectl context section
   terraform     # Terraform workspace section
   line_sep      # Line break
@@ -124,7 +122,8 @@ SPACESHIP_TIME_SHOW=true
 SPACESHIP_DIR_TRUNC_PREFIX="../"
 SPACESHIP_DIR_TRUNC_REPO=false
  
- 
+# load custom env vars
+source ~/.zshenv
  
 # export MANPATH="/usr/local/man:$MANPATH"
  
@@ -186,22 +185,10 @@ alias zshconfig="sudo vim ~/.zshrc && source ~/.zshrc"
 alias vim="nvim"
 alias zshenv="sudo vim ~/.zshenv"
 alias tmka="tmux killw -a"
-alias tmas="tmux attach-session -t SLM"
+alias tmas="tmux attach-session -t"
 alias ns="npm start"
-
-# Docker 
-source $HOME/.config/aliases/docker-alias.sh
- 
-#########################
-# Environment Variables #
-#########################
-PATH="$PATH:$HOME/scripts"
-# Setting variables for WSL X Server 
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 # Get Server IP
-export LIBGL_ALWAYS_INDIRECT=1
-export XDG_RUNTIME_DIR=/run/user/$(id -u)
-
- 
+# Load external aliases
+for f in ~/.config/aliases/*-alias.sh; do source $f; done
  
 #########################
 # Utility Functions     #
@@ -309,5 +296,4 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-
 

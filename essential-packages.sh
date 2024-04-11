@@ -8,5 +8,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install 18
 
 # python
+sudo apt-get install python3-venv
 sudo apt-get install python3-pip
-pip install --no-cache-dir pipenv
+ curl -sSL https://install.python-poetry.org | python3 -

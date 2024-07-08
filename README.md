@@ -14,7 +14,7 @@ This repository contains the dotfiles and scripts used by Joshua to set up and c
 - `nvim/`: Configuration for Neovim.
   - `coc-settings.json`: Settings for the Conquer of Completion (coc) plugin.
   - `init.vim`: Neovim initialization file.
-- `scaffold.sh`: Script to scaffold new projects.
+- `scaffold.sh`: Script to scaffold new systems.
 - `vscode/`: Configuration for Visual Studio Code.
   - `joshua_dev.code-profile`: Visual Studio Code profile.
 

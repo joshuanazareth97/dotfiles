@@ -1,16 +1,16 @@
-# virtualenv
 export WORKON_HOME="~/.virtualenvs" # Virtualenv Wrapper directory
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3" # Virtualenv Wrapper directory
 
 # zsh
-export ZSH_CUSTOM=~/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.oh-my-zsh
 
-export PATH=$PATH:~/.scripts
+export PATH=$PATH:~/scripts:/usr/local/go/bin
 
-# Setting variables for WSL X Server 
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 # Get Server IP
-export LIBGL_ALWAYS_INDIRECT=1
-export XDG_RUNTIME_DIR=/run/user/$(id -u)
+# Go Env Vars
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
 
 . "$HOME/.cargo/env"
-export DBUDDY_SSH_KEY=~/.ssh/aws-loki.pem
+# PyEnv Vars
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"

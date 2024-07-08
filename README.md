@@ -23,7 +23,7 @@ This repository contains the dotfiles and scripts used by Joshua to set up and c
 Run the following command in a bash terminal to scaffold the rpository:
 
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/joshuajnoble/dotfiles/main/scaffold.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/joshuanazareth97/dotfiles/master/scaffold.sh)"
 ```
 
 ## Contributing

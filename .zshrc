@@ -124,18 +124,18 @@ SPACESHIP_DIR_TRUNC_REPO=false
  
 # load custom env vars
 source ~/.zshenv
- 
+
 # export MANPATH="/usr/local/man:$MANPATH"
  
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
  
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
  
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -185,10 +185,23 @@ alias zshconfig="sudo vim ~/.zshrc && source ~/.zshrc"
 alias vim="nvim"
 alias zshenv="sudo vim ~/.zshenv"
 alias tmka="tmux killw -a"
-alias tmas="tmux attach-session -t"
+alias tmas="tmux attach-session"
 alias ns="npm start"
+alias nrd="npm run dev"
 # Load external aliases
 if [ -d ~/.config/aliases ]; then for f in ~/.config/aliases/*-alias.sh; do source $f; done; fi
+ 
+#########################
+# Environment Variables #
+#########################
+PATH="$PATH:$HOME/scripts"
+
+# Setting variables for WSL X Server 
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0 # Get Server IP
+export LIBGL_ALWAYS_INDIRECT=1
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+
+ 
  
 #########################
 # Utility Functions     #

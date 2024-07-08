@@ -297,3 +297,11 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
+# PyEnv Config
+eval "$(pyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/joshua/google-cloud-sdk/path.zsh.inc' ]; then . '/home/joshua/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/joshua/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/joshua/google-cloud-sdk/completion.zsh.inc'; fi

@@ -4,7 +4,7 @@ export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3" # Virtualenv Wrapper director
 # zsh
 export ZSH_CUSTOM=$HOME/.oh-my-zsh
 
-export PATH=$PATH:~/scripts:/usr/local/go/bin
+export PATH=$PATH:$HOME/scripts:/usr/local/go/bin:$HOME/.local/bin
 
 # Go Env Vars
 export GOROOT=/usr/local/go

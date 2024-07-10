@@ -1,25 +1,17 @@
 #!/usr/bin/env bash
 
-# install oh-my-zsh
-zsh --version && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# *** Essential Packages ***
 
-# install needed plugins for oh my zsh
-# spaceship prompt
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-#zsh syntax highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# poetry completions
-mkdir $ZSH_CUSTOM/plugins/poetry
-poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+# homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# install fira code font
-sudo apt install fonts-firacode
+# NVM and Node
+PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+nvm install 18
+nvm install 16
+nvm install 14
 
-# copy config dir
-
-# create dev folder and clone dotfiles
-cd $HOME
-mkdir development && cd development
-git clone https://github.com/joshuanazareth97/dotfiles.git
+# fira code font
+brew tap homebrew/cask-fonts
+brew install --cask font-fira-code
 

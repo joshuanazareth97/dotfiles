@@ -1,28 +1,24 @@
 #!/usr/bin/env bash
 
-# install git
-sudo apt-get install git
-
-# install zsh, oh my zsh and git
-sudo apt install zsh
-zsh --version && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# install needed plugins for oh my zsh
-# spaceship prompt
-git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-#zsh syntax highlighting
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# poetry completions
-mkdir $ZSH_CUSTOM/plugins/poetry
-poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
-
+# *** install required packages ***
+# basics
+sudo apt-get install -Y build-essential make git
 # install fira code font
 sudo apt install fonts-firacode
 
-# copy config dir
+# nvm & node
+PROFILE=/dev/null bash -c 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash'
+nvm install 18
+nvm install 16
+nvm install 14
 
-# create dev folder and clone dotfiles
-cd $HOME
-mkdir development && cd development
-git clone https://github.com/joshuanazareth97/dotfiles.git
+# python
+sudo apt-get install python3-venv
+sudo apt-get install python3-pip
+curl -sSL https://install.python-poetry.org | python3 -
+
+
+# install zsh
+sudo apt install zsh
+bash ./inititial-setup-base.sh
+

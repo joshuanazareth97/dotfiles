@@ -10,4 +10,4 @@ nvm install 18
 # python
 sudo apt-get install python3-venv
 sudo apt-get install python3-pip
- curl -sSL https://install.python-poetry.org | python3 -
+curl -sSL https://install.python-poetry.org | python3 -

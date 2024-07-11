@@ -12,7 +12,8 @@ mkdir $ZSH_CUSTOM/plugins/poetry
 poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
 
 # symlink configs
-for file in $HOME/development/dotfiles/configs/*; do
-    ln -s $file $HOME/.$(basename $file)
+for file in $HOME/development/dotfiles/config/.*; do
+    echo "Copying $file"
+    ln -sf $file $HOME/$(basename $file)
 done
 

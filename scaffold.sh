@@ -2,7 +2,7 @@
 
 # create dev folder and clone dotfiles
 cd $HOME
-mkdir development && cd development
+mkdir development & cd development
 git clone https://github.com/joshuanazareth97/dotfiles.git
 
 base_setup_file=$HOME/development/dotfiles/init/initial-setup-base.sh

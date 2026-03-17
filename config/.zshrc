@@ -6,7 +6,7 @@ zmodload zsh/zprof
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/.local/bin
  
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joshua/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set terminal to xterm for VSCode Vim compatibility
 export TERM=xterm
@@ -162,7 +162,7 @@ zstyle ':completion:*' max-errors 1 numeric
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' squeeze-slashes true
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/joshua/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
  
 autoload -Uz compinit
 compinit
@@ -279,7 +279,7 @@ unset __conda_setup
 
 
 # pnpm
-export PNPM_HOME="/home/joshua/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -314,7 +314,7 @@ load-nvmrc
 eval "$(pyenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/joshua/google-cloud-sdk/path.zsh.inc' ]; then . '/home/joshua/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/joshua/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/joshua/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi

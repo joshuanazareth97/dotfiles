@@ -1,0 +1,194 @@
+{
+  "security.allowedUNCHosts": [
+    "wsl.localhost"
+  ],
+  "files.associations": {
+    "*.js": "javascript",
+    "*.tmpl": "html"
+  },
+  "python.venvFolders": [
+    "E:\\Dev\\Python\\venvs\\",
+    "D:\\Dev\\Python\\venvs\\"
+  ],
+  "python.venvPath": "D:\\Dev\\Python\\venvs\\",
+  "python.linting.pylintArgs": ["--extension-pkg-whitelist=cv2"],
+  "diffEditor.renderSideBySide": true,
+  "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
+  "python.sortImports.args": [
+    "--multi-line=3 --trailing-comma --force-grid-wrap=0 --use-parentheses --line-width=88"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', 'Courier New', monospace",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.root": "./",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.fixAll": "explicit"
+  },
+  "remote.SSH.remotePlatform": {
+    "35.194.171.122": "linux"
+  },
+  "git.enableSmartCommit": true,
+  "explorer.confirmDelete": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "bracketPairColorizer.depreciation-notice": false,
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true
+  },
+  "python.defaultInterpreterPath": "C:\\Program Files\\Python310\\python.exe",
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "workbench.iconTheme": "file-icons",
+  "editor.lineNumbers": "relative",
+  "git.confirmSync": false,
+  "solidity.compileUsingRemoteVersion": "v0.6.12+commit.27d51765",
+  "[dockerfile]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[dotenv]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "advancedNewFile.exclude": {
+    "node_modules": true,
+    "node_modules_electron": true,
+    "dev": true,
+    "dist": true
+  },
+  "advancedNewFile.showInformationMessages": true,
+  "advancedNewFile.convenienceOptions": ["last", "current", "root"],
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "editor.tabSize": 2,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "redhat.telemetry.enabled": false,
+  "todohighlight.defaultStyle": {
+    "backgroundColor": "red"
+  },
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "backgroundColor": "#e74c3c",
+      "overviewRulerColor": "pink"
+    },
+    {
+      "text": "NOTE:",
+      "backgroundColor": "yellow",
+      "overviewRulerColor": "grey"
+    }
+  ],
+  "enableTelemetry": false,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true
+  },
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "python.formatting.provider": "black",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "gitlens.codeLens.authors.enabled": false,
+  "editor.tabCompletion": "on",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "templates.Author": "Joshua",
+  "emmet.triggerExpansionOnTab": true,
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "gitlens.views.branches.branches.layout": "list",
+  "workbench.colorCustomizations": {
+    "editorError.foreground": "#db4b23",
+    "editorWarning.foreground": "#b0b0b05c",
+    "editorInfo.foreground": "#dfb36291"
+  },
+  "editor.accessibilitySupport": "off",
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "files.exclude": {
+    "prisma/generated/**": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "black-formatter.importStrategy": "fromEnvironment",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\WINDOWS\\System32\\wsl.exe",
+      "args": ["-d", "Ubuntu"]
+    }
+  },
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1.25,
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.5,
+  "workbench.startupEditor": "none",
+  "[gotmpl]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "playwright.reuseBrowser": false,
+  "playwright.showTrace": true,
+  "remote.autoForwardPortsSource": "hybrid",
+  "editor.mouseWheelZoom": true,
+  "window.zoomLevel": -0.75,
+  "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+  "colorize.languages": [
+    "javascript",
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ],
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "yaml.schemas": {
+    "file:///home/joshua/.vscode-server/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.enabled": true,
+  "atlascode.bitbucket.enabled": false,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "githubPullRequests.terminalLinksHandler": "github",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "editor.minimap.enabled": false,
+  "jest.virtualFolders": [
+    { "name": "Admin", "rootPath": "apps/dm-admin" },
+    { "name": "UI", "rootPath": "packages/dm-ui" }
+  ],
+  "turbo.path": "/home/joshua/.nvm/versions/node/v18.20.2/bin/turbo",
+  "typescript.tsserver.maxTsServerMemory": 4096,
+  "typescript.tsserver.nodePath": "node",
+  "workbench.colorTheme": "Dracula Theme Soft"
+}

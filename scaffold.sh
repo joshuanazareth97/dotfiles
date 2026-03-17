@@ -2,14 +2,41 @@
 set -Eeuo pipefail
 IFS=$'\n\t'
 
-readonly SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 readonly SCRIPT_NAME="$(basename "${0:-scaffold.sh}")"
 readonly DEVELOPMENT_DIR="$HOME/development"
 readonly DOTFILES_REPO_DIR="$DEVELOPMENT_DIR/dotfiles"
 readonly BASE_SETUP_FILE="$DOTFILES_REPO_DIR/init/initial-setup-base.sh"
-readonly SETUP_COMMON_FILE="$SCRIPT_DIR/init/setup-common.sh"
 
-source "$SETUP_COMMON_FILE"
+timestamp_utc() {
+    date -u +"%Y-%m-%dT%H:%M:%SZ"
+}
+
+log_with_level() {
+    local level=${1:?level is required}
+    shift
+    printf '%s [%s] %s: %s\n' "$(timestamp_utc)" "$SCRIPT_NAME" "$level" "$*"
+}
+
+log_info() {
+    log_with_level INFO "$*"
+}
+
+log_error() {
+    log_with_level ERROR "$*" >&2
+}
+
+fatal() {
+    trap - ERR
+    log_error "Critical failure: $*"
+    exit 1
+}
+
+setup_err_trap() {
+    local line_number=${1:-unknown}
+    local command=${2:-unknown}
+    fatal "command '$command' failed at line $line_number"
+}
+
 trap 'setup_err_trap "$LINENO" "$BASH_COMMAND"' ERR
 
 log_info "Ensuring development directory exists at $DEVELOPMENT_DIR"

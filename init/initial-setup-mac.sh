@@ -42,11 +42,6 @@ ensure_homebrew() {
 }
 
 ensure_cask_fonts() {
-  if ! brew tap | grep -q '^homebrew/cask-fonts$'; then
-    log_info "Tapping homebrew/cask-fonts"
-    brew tap homebrew/cask-fonts
-  fi
-
   if ! brew list --cask font-fira-code >/dev/null 2>&1; then
     log_info "Installing Fira Code font"
     brew install --cask font-fira-code

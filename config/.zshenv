@@ -2,7 +2,7 @@ export WORKON_HOME="~/.virtualenvs" # Virtualenv Wrapper directory
 export VIRTUALENVWRAPPER_PYTHON="/usr/bin/python3" # Virtualenv Wrapper directory
 
 # zsh
-export ZSH_CUSTOM=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
 
 export PATH=$PATH:$HOME/scripts:/usr/local/go/bin:$HOME/.local/bin
 

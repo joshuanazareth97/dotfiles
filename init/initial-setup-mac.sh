@@ -65,7 +65,8 @@ ensure_nvm() {
 
 install_node_versions() {
   local version
-  for version in 18 16 14; do
+  # TODO: Ask user which versions 
+  for version in 22 20 18; do
     if nvm ls --no-colors "$version" >/dev/null 2>&1; then
       log_info "Node.js $version already installed"
     else
